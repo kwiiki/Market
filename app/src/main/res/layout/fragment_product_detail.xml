@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+
+    tools:context=".ProductDetailFragment">
+
+    <ImageView
+        android:id="@+id/pdImageView"
+        android:layout_width="375dp"
+        android:layout_marginStart="20dp"
+        android:layout_height="275dp"/>
+
+    <TextView
+        android:id="@+id/productTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/productDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"/> <!-- Adjust the text size as needed -->
+
+    <TextView
+        android:id="@+id/productPriceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/detailButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="buy"
+        android:textSize="30sp"
+        android:textColor="@color/black"/>
+
+</LinearLayout>
