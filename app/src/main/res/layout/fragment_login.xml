@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D6E1D6"
-    tools:context=".LoginFragment">
+    tools:context=".RegistrationFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -121,7 +121,7 @@
                 android:id="@+id/signUpText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SignUp"
+                android:text="SignIn"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:gravity="center"

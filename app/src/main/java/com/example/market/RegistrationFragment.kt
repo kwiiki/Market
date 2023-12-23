@@ -1,5 +1,6 @@
 package com.example.market
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -13,7 +14,7 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
-class LoginFragment : Fragment() {
+class RegistrationFragment : Fragment() {
     private lateinit var signUpName:EditText
     private lateinit var signUpEmail:EditText
     private lateinit var signUpPhone:EditText
@@ -96,9 +97,14 @@ class LoginFragment : Fragment() {
                         val users:Users = Users(name,email,phone,auth.currentUser!!.uid)
                         database.setValue(users).addOnCompleteListener{
                             if(it.isSuccessful){
-                                val homeFragment:HomeFragment = HomeFragment()
+                                val sharedPreferences = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+                                val editor = sharedPreferences.edit()
+                                editor.putBoolean("user_logged_in", true)
+                                editor.apply()
+
+                                val profileFragment:ProfileFragment = ProfileFragment()
                                 val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                                transaction.replace(R.id.fragmentContainerView, homeFragment)
+                                transaction.replace(R.id.fragmentContainerView, profileFragment)
                                 transaction.addToBackStack(null)
                                 transaction.commit()
                             } else{

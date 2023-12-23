@@ -21,7 +21,7 @@
         tools:layout="@layout/fragment_basket" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.market.LoginFragment"
+        android:name="com.example.market.RegistrationFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
     <fragment
@@ -34,4 +34,9 @@
         android:name="com.example.market.SignFragment"
         android:label="fragment_sign"
         tools:layout="@layout/fragment_sign" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.market.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
