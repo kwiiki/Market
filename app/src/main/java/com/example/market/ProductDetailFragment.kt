@@ -93,14 +93,17 @@ class ProductDetailFragment : Fragment() {
         if (productDetails != null) {
             Glide.with(this).load(productDetails.thumbnail).into(productImage)
             productTitleTextView.text = productDetails.title
-            productPriceTextView.text = productDetails.price.toString()
+            val priceText = productDetails.price.toString() + "$"
+            productPriceTextView.text = priceText
+            productDescriptionTextView.text = productDetails.description
 
             // Add Buy button click listener
             productButton.setOnClickListener {
                 val basketItem = ProductDetails(
                     productDetails.thumbnail,
                     productDetails.title,
-                    productDetails.price
+                    productDetails.price,
+                    productDetails.description
                 )
 
                 sharedViewModel.selectProduct(basketItem)

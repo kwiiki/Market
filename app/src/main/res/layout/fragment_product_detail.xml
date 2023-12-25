@@ -3,44 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#FFFFFF"
-
-    tools:context=".ProductDetailFragment">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <ImageView
         android:id="@+id/pdImageView"
-        android:layout_width="375dp"
-        android:layout_marginStart="20dp"
-        android:layout_height="275dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop" /> <!-- Replace 'your_image' with your actual image resource -->
 
     <TextView
         android:id="@+id/productTitleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:textSize="25sp"/>
+        android:text="Product Title"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"/> <!-- Set your product title text -->
 
     <TextView
         android:id="@+id/productDescriptionTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Product Description"
         android:textColor="@android:color/black"
-        android:textSize="16sp"/> <!-- Adjust the text size as needed -->
+        android:textSize="20sp" /> <!-- Add your product description -->
 
     <TextView
         android:id="@+id/productPriceTextView"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"/>
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:text="Product Price"
+        android:textColor="#F9617A"/> <!-- Set your product price -->
 
     <Button
         android:id="@+id/detailButton"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:text="buy"
-        android:textSize="30sp"
-        android:textColor="@color/black"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Buy Now"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-black"
+        android:theme="@style/Base.Theme.Market"/> <!-- Customize button color -->
 
 </LinearLayout>
