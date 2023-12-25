@@ -32,7 +32,7 @@ class RegistrationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_login, container, false)
+        val view = inflater.inflate(R.layout.fragment_register, container, false)
         signUpName = view.findViewById(R.id.signUpName)
         signUpEmail = view.findViewById(R.id.signUpEmail)
         signUpPhone = view.findViewById(R.id.signUpPhone)

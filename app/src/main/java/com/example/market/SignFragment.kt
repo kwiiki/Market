@@ -27,7 +27,7 @@ class SignFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_sign, container, false)
+        val view = inflater.inflate(R.layout.fragment_login, container, false)
          auth = FirebaseAuth.getInstance()
         signInEmail = view.findViewById(R.id.signInEmail)
         signInPassword = view.findViewById(R.id.signInPassword)

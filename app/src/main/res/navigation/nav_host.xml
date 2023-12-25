@@ -23,7 +23,7 @@
         android:id="@+id/loginFragment"
         android:name="com.example.market.RegistrationFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login1" />
     <fragment
         android:id="@+id/productDetailFragment"
         android:name="com.example.market.ProductDetailFragment"
@@ -33,7 +33,7 @@
         android:id="@+id/signFragment"
         android:name="com.example.market.SignFragment"
         android:label="fragment_sign"
-        tools:layout="@layout/fragment_sign" />
+        tools:layout="@layout/fragment_login1" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.market.ProfileFragment"
