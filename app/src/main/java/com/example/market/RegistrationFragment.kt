@@ -82,7 +82,7 @@ class RegistrationFragment : Fragment() {
 //                signUpPhone.error = "Incorrect phone number"
 //                Toast.makeText(requireActivity(),"number of phone number incorrect",Toast.LENGTH_SHORT).show()
 //            }
-        else if(password.length<6){
+            else if(password.length<6){
                 signUpPassword.error ="password should be greater than 6 characters"
             }else if (password!=passwordc){
                 signUpCPassword.error="password don't matches"
@@ -102,7 +102,9 @@ class RegistrationFragment : Fragment() {
                                 editor.putBoolean("user_logged_in", true)
                                 editor.apply()
 
-                                val homeFragment:HomeFragment = HomeFragment()
+                                Toast.makeText(requireActivity(),"registration was successful",Toast.LENGTH_SHORT).show()
+
+                                val homeFragment = HomeFragment()
                                 val transaction = requireActivity().supportFragmentManager.beginTransaction()
                                 transaction.replace(R.id.fragmentContainerView, homeFragment)
                                 transaction.addToBackStack(null)

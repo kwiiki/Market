@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.fragment.app.activityViewModels
 import com.bumptech.glide.Glide
 import com.example.market.models.ProductDetails
+import com.example.market.viewmodel.HomeViewModel
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import retrofit2.Call
@@ -33,7 +34,7 @@ class ProductDetailFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         arguments?.let {
-            productId = it.getInt(HomeFragment.PRODUCT_ID_KEY, -1)
+            productId = it.getInt(HomeViewModel.PRODUCT_ID_KEY, -1)
         }
         val view = inflater.inflate(R.layout.fragment_product_detail, container, false)
         productTitleTextView = view.findViewById(R.id.productTitleTextView)
