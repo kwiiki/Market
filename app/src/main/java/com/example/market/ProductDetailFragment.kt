@@ -56,16 +56,12 @@ class ProductDetailFragment : Fragment() {
             .client(okHttpClient)
             .build()
 
-        fetchProductDetails(productId)
+        fetchProductDetails(retrofit, productId)
         Log.d("AAA", "Attempting to load image from: ${productId}")
         return view
     }
 
-    private fun fetchProductDetails(productId: Int) {
-        val retrofit = Retrofit.Builder()
-            .baseUrl(URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
+    private fun fetchProductDetails(retrofit: Retrofit, productId: Int) {
 
         val apiInterface = retrofit.create(ApiInterface::class.java)
         val productDetailsCall = apiInterface.getProductDetail(productId)
