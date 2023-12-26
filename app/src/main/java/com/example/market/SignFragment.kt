@@ -70,9 +70,9 @@ class SignFragment : Fragment() {
                         editor.putBoolean("user_logged_in", true)
                         editor.apply()
 
-                        val profileFragment:ProfileFragment = ProfileFragment()
+                        val homeFragment:HomeFragment = HomeFragment()
                         val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                        transaction.replace(R.id.fragmentContainerView, profileFragment)
+                        transaction.replace(R.id.fragmentContainerView, homeFragment)
                         transaction.addToBackStack(null)
                         transaction.commit()
                     } else{
