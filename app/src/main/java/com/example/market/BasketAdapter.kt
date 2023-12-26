@@ -22,7 +22,11 @@ class BasketAdapter(private val context: Context, private val basketItems: Mutab
 
         Glide.with(context).load(currentProduct.thumbnail).into(holder.productImage)
         holder.productTitle.text = currentProduct.title
-        holder.productPrice.text = currentProduct.price.toString()
+        val productPriceText = "$${currentProduct.price}"
+        val productInstallmentText = String.format("Installment: $%d/month (for 12 months)",
+            currentProduct.price / 12)
+        holder.productPrice.text = productPriceText
+        holder.productInstallment.text = productInstallmentText
     }
 
     override fun getItemCount(): Int {
@@ -33,5 +37,6 @@ class BasketAdapter(private val context: Context, private val basketItems: Mutab
         val productImage: ImageView = view.findViewById(R.id.RV_image)
         val productTitle: TextView = view.findViewById(R.id.title_rv)
         val productPrice: TextView = view.findViewById(R.id.price_rv)
+        val productInstallment: TextView = view.findViewById(R.id.installment_rv)
     }
 }

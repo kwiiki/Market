@@ -48,13 +48,17 @@ class GridViewAdapter(
         val productImage: ImageView = convertView!!.findViewById(R.id.RV_image)
         val productTitle: TextView = convertView.findViewById(R.id.title_rv)
         val productPrice: TextView = convertView.findViewById(R.id.price_rv)
+        val installment: TextView = convertView.findViewById(R.id.installment_rv);
 
         // Load image using Glide
         Glide.with(context).load(productList[position].thumbnail).into(productImage)
 
         // Set text values
         productTitle.text = productList[position].title
-        productPrice.text = productList[position].price.toString()
+        val productPriceText = productList[position].price.toString() + "$"
+        productPrice.text = productPriceText
+        val productInstallmentText = String.format("%.2f$/m",productList[position].price / 12)
+        installment.text = productInstallmentText
 
         convertView.setOnClickListener {
             val productDetailFragment = ProductDetailFragment()
@@ -69,7 +73,7 @@ class GridViewAdapter(
             transaction.commit()
         }
 
-         return convertView
+        return convertView
 //    }
     }
 }

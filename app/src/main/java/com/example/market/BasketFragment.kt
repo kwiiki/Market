@@ -50,7 +50,8 @@ class BasketFragment : Fragment() {
 
     private fun calculateTotalPrices() {
         totalPrices = basketItems.sumOf { it.price }
-        totalPrice.text = totalPrices.toString()
+        val totalPricesText = "Total Price: $$totalPrices"
+        totalPrice.text = totalPricesText
         // Update UI or perform any other action with the totalPrices value
     }
 }

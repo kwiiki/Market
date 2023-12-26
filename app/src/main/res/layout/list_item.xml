@@ -1,34 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:padding="8dp">
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_margin="5dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:background="#CCFFCC">
+
         <ImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/RV_image"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:layout_margin="3dp"/>
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop" />
+
         <TextView
             android:id="@+id/title_rv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="5dp"
-            android:textSize="25sp"/>
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/RV_image"
+            android:layout_alignTop="@id/RV_image" />
+
         <TextView
             android:id="@+id/price_rv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Price"
-            android:layout_marginStart="330dp"
-            android:layout_marginTop="5dp"
-            android:textSize="15sp"/>
-    </RelativeLayout>
+            android:textColor="#FF3333"
+            android:textSize="18sp"
+            android:layout_below="@id/title_rv"
+            android:layout_toEndOf="@id/RV_image"
+            android:layout_alignStart="@id/title_rv" />
 
+        <TextView
+            android:id="@+id/installment_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Installment: $X/month (for 12 months)"
+            android:textColor="#FFA500"
+            android:textSize="14sp"
+            android:layout_below="@id/price_rv"
+            android:layout_toEndOf="@id/RV_image"
+            android:layout_alignStart="@id/title_rv" />
+    </RelativeLayout>
 </LinearLayout>
